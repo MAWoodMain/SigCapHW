@@ -1,0 +1,44 @@
+Comment,Designator,Footprint,LCSC Part #,MPN,Quantity,JLC stock on 2026-11-07,Unit USD,JLC listing,Notes
+10pF 50V C0G,C1,Capacitor_SMD:C_0402_1005Metric,C161145,GCM1555C1H100FA16D,1,40048,0.0185,https://jlcpcb.com/partdetail/C161145,
+4.7nF 50V X7R,C2,Capacitor_SMD:C_0402_1005Metric,C307338,CL05B472KB5VPNC,1,5665,0.0174,https://jlcpcb.com/partdetail/C307338,
+1nF 16V X7R,"C7,C8,C9,C11,C13,C14",Capacitor_SMD:C_0402_1005Metric,C189467,CC0402KRX7R7BB102,6,561800,0.0022,https://jlcpcb.com/partdetail/C189467,
+100nF 50V X7R,"C5,C6,C10,C12,C15,C16,C22,C23,C40",Capacitor_SMD:C_0402_1005Metric,C131394,CC0402KRX7R9BB104,9,10928519,0.0106,https://jlcpcb.com/partdetail/C131394,
+1uF 25V X7R,"C3,C4,C17,C18,C20,C26,C27,C28,C31,C32,C33,C38",Capacitor_SMD:C_0603_1608Metric,C86020,GRM188R71E105KA12D,12,79371,0.0473,https://jlcpcb.com/partdetail/C86020,
+4.7uF 25V X7R,"C19,C21,C24,C25",Capacitor_SMD:C_1206_3216Metric,C1872,CL31B475KAHNNNE,4,66925,0.0622,https://jlcpcb.com/partdetail/C1872,
+10uF 25V X7R,"C30,C34",Capacitor_SMD:C_1206_3216Metric,C77093,GRM31CR71E106KA12L,2,138577,0.2372,https://jlcpcb.com/partdetail/C77093,
+10uF 25V X5R,C37,Capacitor_SMD:C_1206_3216Metric,C9807,CL31A106KAHNNNE,1,666005,0.0537,https://jlcpcb.com/partdetail/C9807,
+22uF 25V X7R,"C29,C35,C39",Capacitor_SMD:C_1210_3225Metric,C21397,GRM32ER71E226KE15L,3,72247,0.404,https://jlcpcb.com/partdetail/C21397,
+22uF 16V,C36,Capacitor_Tantalum_SMD:CP_EIA-3528-21_Kemet-B,C1952809,TPSB226K016R0600,1,431,1.0631,https://jlcpcb.com/partdetail/C1952809,
+1.2M 1% 200V,"R1,R2,R4,R5",Resistor_SMD:R_1206_3216Metric,C2085747,CRCW12061M20FKEA,4,555,0.0552,https://jlcpcb.com/partdetail/C2085747,
+10k,"R3,R21,R26,R27,R30",Resistor_SMD:R_0402_1005Metric,C25744,0402WGF1002TCE,5,16225087,0.0028,https://jlcpcb.com/partdetail/C25744,
+10R,"R6,R8",Resistor_SMD:R_0402_1005Metric,C25077,0402WGF100JTCE,2,2730843,0.0012,https://jlcpcb.com/partdetail/C25077,
+47k,"R9,R10",Resistor_SMD:R_0402_1005Metric,C25792,0402WGF4702TCE,2,6133333,0.0019,https://jlcpcb.com/partdetail/C25792,
+10.0k 0.1%,"R11,R12,R13,R14,R15,R16,R17,R18",Resistor_SMD:R_0402_1005Metric,C190095,RT0402BRD0710KL,8,1559595,0.0246,https://jlcpcb.com/partdetail/C190095,
+49.9,"R19,R20",Resistor_SMD:R_0402_1005Metric,C25120,0402WGF499JTCE,2,1329025,0.0013,https://jlcpcb.com/partdetail/C25120,
+108k,R22,,,,1,,,,108 kOhm exact value requires sourcing. Confirm before changing the feedback ratio.
+105k,R23,Resistor_SMD:R_0402_1005Metric,C25742,0402WGF1053TCE,1,44658,0.0021,https://jlcpcb.com/partdetail/C25742,
+100k,"R24,R25",Resistor_SMD:R_0402_1005Metric,C25741,0402WGF1003TCE,2,8298798,0.0013,https://jlcpcb.com/partdetail/C25741,
+5K1,"R28,R29",Resistor_SMD:R_0402_1005Metric,C25905,0402WGF5101TCE,2,4548081,0.0023,https://jlcpcb.com/partdetail/C25905,
+0R,"R31,R32",Resistor_SMD:R_0402_1005Metric,C138289,AC0402JR-070RL,2,2724027,0.0026,https://jlcpcb.com/partdetail/C138289,
+1 mOhm 3W,R7,,C844476,WSK12161L000FEA,1,3754,0.8914,https://jlcpcb.com/partdetail/C844476,No standard WSK1216 four-terminal footprint found.
+14D431K,RV1,Varistor:RV_Disc_D15.5mm_W5.2mm_P7.5mm,C1527438,MOV-14D431K,1,220,0.4465,https://jlcpcb.com/partdetail/C1527438,
+1A,F1,Fuse:Fuse_Littelfuse_372_D8.50mm,C142712,38211000000,1,2711,0.202,https://jlcpcb.com/partdetail/C142712,Littelfuse 382 TR5 body and lead geometry match the standard 372 land pattern.
+Chassis,H1,MountingHole:MountingHole_3.2mm_M3_Pad,,,1,,,,PCB chassis bonding hole. M3 hardware is an enclosure item.
+AC IN,J1,,,PF0030/PC,1,,,,Specified PF0030/PC C3094905 is out of stock and has no standard footprint. PF0030/63 C17638174 is a stocked wired alternative.
+Load Out,P1,,C3095293,PX0675/PC,1,33,4.6971,https://jlcpcb.com/partdetail/C3095293,No standard PX0675/PC footprint found.
+Current Sense,J2,Connector_Coaxial:BNC_Amphenol_B6252HB-NPP3G-50_Horizontal,C22457552,B6252HB-NPP3G-50,1,435,3.6324,https://jlcpcb.com/partdetail/C22457552,
+Voltage Sense,J3,Connector_Coaxial:BNC_Amphenol_B6252HB-NPP3G-50_Horizontal,C22457552,B6252HB-NPP3G-50,1,435,3.6324,https://jlcpcb.com/partdetail/C22457552,
+USB,J4,Connector_USB:USB_C_Receptacle_GCT_USB4105-xx-A_16P_TopMnt_Horizontal,C3020560,USB4105-GF-A,1,19231,1.0206,https://jlcpcb.com/partdetail/C3020560,Unused A8/B8 SBU pads remain unconnected.
+UART,J5,Connector_PinHeader_2.54mm:PinHeader_1x03_P2.54mm_Vertical,C3335811,TSW-103-07-G-S,1,1688,0.3456,https://jlcpcb.com/partdetail/C3335811,
+USB Power,JP1,Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical,C7402729,TSW-102-07-G-S,1,937,0.3006,https://jlcpcb.com/partdetail/C7402729,Open header. Temporary shunt is bench hardware.
+RST,SW1,Button_Switch_THT:SW_TH_Tactile_Omron_B3F-100x,C93157,B3F-1000,1,5205,0.18,https://jlcpcb.com/partdetail/C93157,
+BOOT,SW2,Button_Switch_THT:SW_TH_Tactile_Omron_B3F-100x,C93157,B3F-1000,1,5205,0.18,https://jlcpcb.com/partdetail/C93157,
+PGOOD,TP1,TestPoint:TestPoint_Keystone_5000-5004_Miniature,C5199900,5000,1,4174,0.3031,https://jlcpcb.com/partdetail/C5199900,
+AMC3302,U1,Package_SO:SOIC-16W_7.5x10.3mm_P1.27mm,C4990160,AMC3302DWER,1,246,3.2203,https://jlcpcb.com/partdetail/C4990160,
+AMC3330,U2,Package_SO:SOIC-16W_7.5x10.3mm_P1.27mm,C2999368,AMC3330DWER,1,2086,4.9866,https://jlcpcb.com/partdetail/C2999368,
+IRM-05-5,U3,Converter_ACDC:Converter_ACDC_MeanWell_IRM-05-xx_THT,C48603696,IRM-05-5,1,3237,4.926,https://jlcpcb.com/partdetail/C48603696,Optional onboard mains supply.
+OPA2320AID,U4,Package_SO:SOIC-8_3.9x4.9mm_P1.27mm,C2863402,OPA2320AIDR,1,5569,2.6053,https://jlcpcb.com/partdetail/C2863402,
+LM27762,U5,Package_SON:WSON-12-1EP_3x2mm_P0.5mm_EP1x2.65_ThermalVias,C473398,LM27762DSSR,1,40338,0.9617,https://jlcpcb.com/partdetail/C473398,
+ESP32-S3-MINI-1,U6,RF_Module:ESP32-S2-MINI-1,C3013941,ESP32-S3-MINI-1-N4R2,1,7494,5.0046,https://jlcpcb.com/partdetail/C3013941,N4R2 variant provides 2 MB PSRAM for capture buffering.
+ADS8681W,"U7,U8",Package_DFN_QFN:QFN-16-1EP_4x4mm_P0.65mm_EP2.7x2.7mm,C41410098,ADS8681WRUMT,2,31,12.333,https://jlcpcb.com/partdetail/C41410098,
+AMS1117-3.3,U9,Package_TO_SOT_SMD:SOT-223-3_TabPin2,C6186,AMS1117-3.3,1,1612224,0.206,https://jlcpcb.com/partdetail/C6186,
