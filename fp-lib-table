@@ -1,0 +1,4 @@
+(fp_lib_table
+	(version 7)
+	(lib (name "SigCap") (type "KiCad") (uri "${KIPRJMOD}/SigCap.pretty") (options "") (descr ""))
+)

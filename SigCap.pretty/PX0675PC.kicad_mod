@@ -1,0 +1,246 @@
+(footprint "PX0675PC"
+	(version 20260206)
+	(generator "pcbnew")
+	(generator_version "10.0")
+	(layer "F.Cu")
+	(descr "PX0675/PC-2")
+	(tags "Connector")
+	(property "Reference" "J**"
+		(at 7 -12.862 0)
+		(layer "F.SilkS")
+		(uuid "af772b98-a2a0-4a97-9056-c4ec24601eef")
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.254)
+			)
+		)
+	)
+	(property "Value" "PX0675PC"
+		(at 7 -12.862 0)
+		(layer "F.SilkS")
+		(hide yes)
+		(uuid "99b8c693-e033-479d-b51c-9780c471d974")
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.254)
+			)
+		)
+	)
+	(property "Datasheet" ""
+		(at 0 0 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "8532ada0-f2e0-4a52-bb2b-a669d07812a2")
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+	)
+	(property "Description" ""
+		(at 0 0 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "041df590-5172-4584-8f88-086f624d167f")
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+	)
+	(attr through_hole)
+	(duplicate_pad_numbers_are_jumpers no)
+	(fp_line
+		(start -18.05 -27)
+		(end 32.05 -27)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "623c1a05-e9c6-4d08-b6da-fa13557f47d0")
+	)
+	(fp_line
+		(start -18.05 1.2)
+		(end -18.05 -27)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "967b222c-fbcb-48aa-ae05-222a0490040b")
+	)
+	(fp_line
+		(start -2 1.2)
+		(end -18.05 1.2)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "b106bbcf-f7c2-4c2a-8deb-07a4461faa20")
+	)
+	(fp_line
+		(start 32.05 -27)
+		(end 32.05 1.2)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "3f36d3e9-4efd-467e-a566-b51e09086aed")
+	)
+	(fp_line
+		(start 32.05 1.2)
+		(end 16 1.2)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "193e1a9c-7e7c-42de-a8b6-465c18b8a1b2")
+	)
+	(fp_line
+		(start -19.05 -28)
+		(end 33.05 -28)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "F.CrtYd")
+		(uuid "b16c9e54-17fe-4d33-8c65-f569e2d899f2")
+	)
+	(fp_line
+		(start -19.05 2.275)
+		(end -19.05 -28)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "F.CrtYd")
+		(uuid "ba6a2db3-0a7c-4c00-92da-901b718e63bb")
+	)
+	(fp_line
+		(start 33.05 -28)
+		(end 33.05 2.275)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "F.CrtYd")
+		(uuid "1d344bc3-d6d1-4177-880b-3e9bb560409e")
+	)
+	(fp_line
+		(start 33.05 2.275)
+		(end -19.05 2.275)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "F.CrtYd")
+		(uuid "12dafbf6-2b20-435f-a5af-eb82dd9a5527")
+	)
+	(fp_line
+		(start -18.05 -27)
+		(end 32.05 -27)
+		(stroke
+			(width 0.2)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(uuid "c1d887bd-0ee2-496e-a62e-62bf2397ed84")
+	)
+	(fp_line
+		(start -18.05 1.2)
+		(end -18.05 -27)
+		(stroke
+			(width 0.2)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(uuid "a2cf1911-dac8-45a1-b493-851a1832d6a0")
+	)
+	(fp_line
+		(start 32.05 -27)
+		(end 32.05 1.2)
+		(stroke
+			(width 0.2)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(uuid "8a51bffc-0a6c-43ba-99a7-2aa7a29324de")
+	)
+	(fp_line
+		(start 32.05 1.2)
+		(end -18.05 1.2)
+		(stroke
+			(width 0.2)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(uuid "475e26bb-e6f6-4bc1-b472-85adc34e3421")
+	)
+	(fp_text user "${REFERENCE}"
+		(at 7 -12.862 0)
+		(layer "F.Fab")
+		(uuid "1c807535-554c-49c6-b8e7-ee9ac2a34a63")
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.254)
+			)
+		)
+	)
+	(pad "" np_thru_hole circle
+		(at -13 -15.1)
+		(size 1 1)
+		(drill 3.4)
+		(layers "*.Mask")
+		(uuid "263a071a-1e4d-4d06-9b1d-a4cb50801fa8")
+	)
+	(pad "" np_thru_hole circle
+		(at 27 -15.1)
+		(size 1 1)
+		(drill 3.4)
+		(layers "*.Mask")
+		(uuid "beb6fa3f-eb5f-43e1-a283-8283bdcc1f49")
+	)
+	(pad "1" thru_hole circle
+		(at 0 0)
+		(size 3 3)
+		(drill 1.7)
+		(layers "*.Cu" "*.Mask")
+		(remove_unused_layers no)
+		(uuid "ad228208-db72-4a71-8730-51b509e73a97")
+	)
+	(pad "2" thru_hole circle
+		(at 14 0)
+		(size 3 3)
+		(drill 1.7)
+		(layers "*.Cu" "*.Mask")
+		(remove_unused_layers no)
+		(uuid "3d01a2f3-6ba2-404d-9ff3-c81626c690be")
+	)
+	(pad "3" thru_hole circle
+		(at 7 0)
+		(size 3 3)
+		(drill 1.7)
+		(layers "*.Cu" "*.Mask")
+		(remove_unused_layers no)
+		(uuid "a0e23758-c057-4178-a3aa-8b9914bbb73f")
+	)
+	(embedded_fonts no)
+	(model "${KIPRJMOD}/SigCap.pretty/PX0675_PC.stp"
+		(offset
+			(xyz 6.999999895 23.35000003 15.56999946)
+		)
+		(scale
+			(xyz 1 1 1)
+		)
+		(rotate
+			(xyz -180 0 -180)
+		)
+	)
+)
