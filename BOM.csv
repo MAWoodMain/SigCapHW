@@ -19,12 +19,12 @@ Comment,Designator,Footprint,LCSC Part #,MPN,Quantity,JLC stock on 2026-11-07,Un
 100k,"R24,R25",Resistor_SMD:R_0402_1005Metric,C25741,0402WGF1003TCE,2,8298798,0.0013,https://jlcpcb.com/partdetail/C25741,
 5K1,"R28,R29",Resistor_SMD:R_0402_1005Metric,C25905,0402WGF5101TCE,2,4548081,0.0023,https://jlcpcb.com/partdetail/C25905,
 0R,"R31,R32",Resistor_SMD:R_0402_1005Metric,C138289,AC0402JR-070RL,2,2724027,0.0026,https://jlcpcb.com/partdetail/C138289,
-1 mOhm 3W,R7,,C844476,WSK12161L000FEA,1,3754,0.8914,https://jlcpcb.com/partdetail/C844476,No standard WSK1216 four-terminal footprint found.
+1 mOhm 3W,R7,SigCap:WSK1216,C844476,WSK12161L000FEA,1,3754,0.8914,https://jlcpcb.com/partdetail/C844476,
 14D431K,RV1,Varistor:RV_Disc_D15.5mm_W5.2mm_P7.5mm,C1527438,MOV-14D431K,1,220,0.4465,https://jlcpcb.com/partdetail/C1527438,
 1A,F1,Fuse:Fuse_Littelfuse_372_D8.50mm,C142712,38211000000,1,2711,0.202,https://jlcpcb.com/partdetail/C142712,Littelfuse 382 TR5 body and lead geometry match the standard 372 land pattern.
-Chassis,H1,MountingHole:MountingHole_3.2mm_M3_Pad,,,1,,,,PCB chassis bonding hole. M3 hardware is an enclosure item.
-AC IN,J1,,,PF0030/PC,1,,,,Distributor supplied: Farnell UK 428784 (https://uk.farnell.com/bulgin/pf0030-pc/inlet-iec-fused-pcb-mount/dp/428784) / DigiKey UK 708-1914-ND (https://www.digikey.co.uk/en/products/detail/bulgin/PF0030-PC/3962123) / RS 70427399 (US listing). PCB footprint pending.
-Load Out,P1,,C3095293,PX0675/PC,1,33,4.6971,https://jlcpcb.com/partdetail/C3095293,No standard PX0675/PC footprint found.
+Chassis,H1,SigCap:63849-1,C86469,63849-1,1,,,https://jlcpcb.com/partdetail/TeConnectivity-638491/C86469,PCB chassis bonding tab. Mating crimp is harness hardware.
+AC IN,J1,SigCap:PF0030PC,,PF0030/PC,1,,,,Distributor supplied: Farnell UK 428784 (https://uk.farnell.com/bulgin/pf0030-pc/inlet-iec-fused-pcb-mount/dp/428784) / DigiKey UK 708-1914-ND (https://www.digikey.co.uk/en/products/detail/bulgin/PF0030-PC/3962123) / RS 70427399 (US listing).
+Load Out,P1,SigCap:PX0675PC,C3095293,PX0675/PC,1,33,4.6971,https://jlcpcb.com/partdetail/C3095293,
 Current Sense,J2,Connector_Coaxial:BNC_Amphenol_B6252HB-NPP3G-50_Horizontal,C22457552,B6252HB-NPP3G-50,1,435,3.6324,https://jlcpcb.com/partdetail/C22457552,
 Voltage Sense,J3,Connector_Coaxial:BNC_Amphenol_B6252HB-NPP3G-50_Horizontal,C22457552,B6252HB-NPP3G-50,1,435,3.6324,https://jlcpcb.com/partdetail/C22457552,
 USB,J4,Connector_USB:USB_C_Receptacle_GCT_USB4105-xx-A_16P_TopMnt_Horizontal,C3020560,USB4105-GF-A,1,19231,1.0206,https://jlcpcb.com/partdetail/C3020560,Unused A8/B8 SBU pads remain unconnected.
