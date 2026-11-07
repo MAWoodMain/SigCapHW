@@ -1,12 +1,35 @@
-# KiCad local state and backups
+# KiCad local state, lock files, and backups
 *.kicad_prl
 ~*.lck
 *-backups/
+fp-info-cache
+*.kicad_pcb-bak
+*.kicad_sch-bak
+*.kicad_pro-bak
+*.kicad_prl-bak
+*.bak
+*.bck
 
-# Superseded schematic and generated review exports
+# Generated KiCad exports
+*.gbr
+*.gbrjob
+*.drl
+*.pos
+*.net
+*.erc
+*.drc
+/SigCap.pdf
+/SigCap-*.pdf
+
+# Superseded local design files
 /acquisition_OLD.kicad_sch
 /AFE-design-notes.md
 /AFE_BOM.csv
-/SigCap.pdf
-/SigCap-AFE.pdf
-/SigCap-ADS8363 and ESP32-S3.pdf
+
+# Temporary editor and desktop files
+*.tmp
+*.swp
+*.swo
+*~
+.DS_Store
+Thumbs.db
