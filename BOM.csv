@@ -23,7 +23,7 @@ Comment,Designator,Footprint,LCSC Part #,MPN,Quantity,JLC stock on 2026-11-07,Un
 14D431K,RV1,Varistor:RV_Disc_D15.5mm_W5.2mm_P7.5mm,C1527438,MOV-14D431K,1,220,0.4465,https://jlcpcb.com/partdetail/C1527438,
 1A,F1,Fuse:Fuse_Littelfuse_372_D8.50mm,C142712,38211000000,1,2711,0.202,https://jlcpcb.com/partdetail/C142712,Littelfuse 382 TR5 body and lead geometry match the standard 372 land pattern.
 Chassis,H1,MountingHole:MountingHole_3.2mm_M3_Pad,,,1,,,,PCB chassis bonding hole. M3 hardware is an enclosure item.
-AC IN,J1,,,PF0030/PC,1,,,,Specified PF0030/PC C3094905 is out of stock and has no standard footprint. PF0030/63 C17638174 is a stocked wired alternative.
+AC IN,J1,,,PF0030/PC,1,,,,Distributor supplied: Farnell UK 428784 (https://uk.farnell.com/bulgin/pf0030-pc/inlet-iec-fused-pcb-mount/dp/428784) / DigiKey UK 708-1914-ND (https://www.digikey.co.uk/en/products/detail/bulgin/PF0030-PC/3962123) / RS 70427399 (US listing). PCB footprint pending.
 Load Out,P1,,C3095293,PX0675/PC,1,33,4.6971,https://jlcpcb.com/partdetail/C3095293,No standard PX0675/PC footprint found.
 Current Sense,J2,Connector_Coaxial:BNC_Amphenol_B6252HB-NPP3G-50_Horizontal,C22457552,B6252HB-NPP3G-50,1,435,3.6324,https://jlcpcb.com/partdetail/C22457552,
 Voltage Sense,J3,Connector_Coaxial:BNC_Amphenol_B6252HB-NPP3G-50_Horizontal,C22457552,B6252HB-NPP3G-50,1,435,3.6324,https://jlcpcb.com/partdetail/C22457552,
