@@ -3071,7 +3071,7 @@
 				(justify right)
 			)
 		)
-		(property "Value" "108k"
+		(property "Value" "105k"
 			(at 213.868 73.152 90)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3082,7 +3082,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Resistor_SMD:R_0402_1005Metric"
 			(at 215.9 71.12 0)
 			(hide yes)
 			(show_name no)
@@ -3109,6 +3109,24 @@
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MPN" "0402WGF1053TCE"
+			(at 215.9 71.12 0)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC Part #" "C25742"
+			(at 215.9 71.12 0)
+			(hide yes)
 			(effects
 				(font
 					(size 1.27 1.27)

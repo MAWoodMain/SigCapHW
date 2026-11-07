@@ -15,8 +15,7 @@ Comment,Designator,Footprint,LCSC Part #,MPN,Quantity,JLC stock on 2026-11-07,Un
 47k,"R9,R10",Resistor_SMD:R_0402_1005Metric,C25792,0402WGF4702TCE,2,6133333,0.0019,https://jlcpcb.com/partdetail/C25792,
 10.0k 0.1%,"R11,R12,R13,R14,R15,R16,R17,R18",Resistor_SMD:R_0402_1005Metric,C190095,RT0402BRD0710KL,8,1559595,0.0246,https://jlcpcb.com/partdetail/C190095,
 49.9,"R19,R20",Resistor_SMD:R_0402_1005Metric,C25120,0402WGF499JTCE,2,1329025,0.0013,https://jlcpcb.com/partdetail/C25120,
-108k,R22,,,,1,,,,108 kOhm exact value requires sourcing. Confirm before changing the feedback ratio.
-105k,R23,Resistor_SMD:R_0402_1005Metric,C25742,0402WGF1053TCE,1,44658,0.0021,https://jlcpcb.com/partdetail/C25742,
+105k,"R22,R23",Resistor_SMD:R_0402_1005Metric,C25742,0402WGF1053TCE,2,44658,0.0021,https://jlcpcb.com/partdetail/C25742,
 100k,"R24,R25",Resistor_SMD:R_0402_1005Metric,C25741,0402WGF1003TCE,2,8298798,0.0013,https://jlcpcb.com/partdetail/C25741,
 5K1,"R28,R29",Resistor_SMD:R_0402_1005Metric,C25905,0402WGF5101TCE,2,4548081,0.0023,https://jlcpcb.com/partdetail/C25905,
 0R,"R31,R32",Resistor_SMD:R_0402_1005Metric,C138289,AC0402JR-070RL,2,2724027,0.0026,https://jlcpcb.com/partdetail/C138289,
