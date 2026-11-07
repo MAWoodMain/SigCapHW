@@ -30,8 +30,8 @@ Voltage Sense,J3,Connector_Coaxial:BNC_Amphenol_B6252HB-NPP3G-50_Horizontal,C224
 USB,J4,Connector_USB:USB_C_Receptacle_GCT_USB4105-xx-A_16P_TopMnt_Horizontal,C3020560,USB4105-GF-A,1,19231,1.0206,https://jlcpcb.com/partdetail/C3020560,Unused A8/B8 SBU pads remain unconnected.
 UART,J5,Connector_PinHeader_2.54mm:PinHeader_1x03_P2.54mm_Vertical,C3335811,TSW-103-07-G-S,1,1688,0.3456,https://jlcpcb.com/partdetail/C3335811,
 USB Power,JP1,Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical,C7402729,TSW-102-07-G-S,1,937,0.3006,https://jlcpcb.com/partdetail/C7402729,Open header. Temporary shunt is bench hardware.
-RST,SW1,Button_Switch_THT:SW_TH_Tactile_Omron_B3F-100x,C93157,B3F-1000,1,5205,0.18,https://jlcpcb.com/partdetail/C93157,
-BOOT,SW2,Button_Switch_THT:SW_TH_Tactile_Omron_B3F-100x,C93157,B3F-1000,1,5205,0.18,https://jlcpcb.com/partdetail/C93157,
+RST,SW1,Button_Switch_THT:SW_Tactile_SKHH_Angled,C125034,SKHHLQA010,1,2250,0.1502,https://jlcpcb.com/partdetail/C125034,8.35 mm stem. KiCad outline shows the 5.85 mm variant.
+BOOT,SW2,Button_Switch_THT:SW_Tactile_SKHH_Angled,C125034,SKHHLQA010,1,2250,0.1502,https://jlcpcb.com/partdetail/C125034,8.35 mm stem. KiCad outline shows the 5.85 mm variant.
 PGOOD,TP1,TestPoint:TestPoint_Keystone_5000-5004_Miniature,C5199900,5000,1,4174,0.3031,https://jlcpcb.com/partdetail/C5199900,
 AMC3302,U1,Package_SO:SOIC-16W_7.5x10.3mm_P1.27mm,C4990160,AMC3302DWER,1,246,3.2203,https://jlcpcb.com/partdetail/C4990160,
 AMC3330,U2,Package_SO:SOIC-16W_7.5x10.3mm_P1.27mm,C2999368,AMC3330DWER,1,2086,4.9866,https://jlcpcb.com/partdetail/C2999368,

@@ -5881,7 +5881,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Button_Switch_THT:SW_TH_Tactile_Omron_B3F-100x"
+		(property "Footprint" "Button_Switch_THT:SW_Tactile_SKHH_Angled"
 			(at 276.86 63.5 0)
 			(hide yes)
 			(show_name no)
@@ -5892,7 +5892,7 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "https://tech.alpsalpine.com/e/products/detail/SKHHLQA010/"
 			(at 276.86 63.5 0)
 			(hide yes)
 			(show_name no)
@@ -5914,7 +5914,7 @@
 				)
 			)
 		)
-		(property "MPN" "B3F-1000"
+		(property "MPN" "SKHHLQA010"
 			(at 271.78 63.5 0)
 			(hide yes)
 			(show_name no)
@@ -5925,7 +5925,7 @@
 				)
 			)
 		)
-		(property "LCSC Part #" "C93157"
+		(property "LCSC Part #" "C125034"
 			(at 271.78 63.5 0)
 			(hide yes)
 			(show_name no)
@@ -10523,7 +10523,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Button_Switch_THT:SW_TH_Tactile_Omron_B3F-100x"
+		(property "Footprint" "Button_Switch_THT:SW_Tactile_SKHH_Angled"
 			(at 264.16 63.5 0)
 			(hide yes)
 			(show_name no)
@@ -10534,7 +10534,7 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "https://tech.alpsalpine.com/e/products/detail/SKHHLQA010/"
 			(at 264.16 63.5 0)
 			(hide yes)
 			(show_name no)
@@ -10556,7 +10556,7 @@
 				)
 			)
 		)
-		(property "MPN" "B3F-1000"
+		(property "MPN" "SKHHLQA010"
 			(at 259.08 63.5 0)
 			(hide yes)
 			(show_name no)
@@ -10567,7 +10567,7 @@
 				)
 			)
 		)
-		(property "LCSC Part #" "C93157"
+		(property "LCSC Part #" "C125034"
 			(at 259.08 63.5 0)
 			(hide yes)
 			(show_name no)
