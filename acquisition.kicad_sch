@@ -4312,10 +4312,6 @@
 		(uuid "0ac206a6-9ce9-446c-b83f-d1d2f3192240")
 	)
 	(no_connect
-		(at 165.1 63.5)
-		(uuid "0ce412ce-07d9-48c5-bd04-567f2befff69")
-	)
-	(no_connect
 		(at 265.43 128.27)
 		(uuid "1088369f-e0b8-44bb-a1a3-558bd696be44")
 	)
@@ -4364,10 +4360,6 @@
 		(uuid "88d0fcf6-0569-42a8-a84e-fd92eb612a26")
 	)
 	(no_connect
-		(at 195.58 68.58)
-		(uuid "8a777836-6a4b-4c41-af46-5e8941d7930a")
-	)
-	(no_connect
 		(at 165.1 66.04)
 		(uuid "97522366-d6fd-4648-8ff7-9fcd2979dc1f")
 	)
@@ -4398,6 +4390,10 @@
 	(no_connect
 		(at 195.58 91.44)
 		(uuid "eca508e2-608a-4d4c-b0f8-fb0ed5d69f46")
+	)
+	(no_connect
+		(at 195.58 68.58)
+		(uuid "fd18beaa-528c-42a8-8eeb-d908cff18c39")
 	)
 	(no_connect
 		(at 195.58 104.14)
@@ -5363,6 +5359,16 @@
 		)
 		(uuid "16408800-ea1c-4dad-917e-60acfa02d101")
 	)
+	(label "USB_D+"
+		(at 203.2 66.04 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "39d058f2-44c7-4b37-935e-403ac72d8c6b")
+	)
 	(label "V_ADC_RVS"
 		(at 109.22 130.81 0)
 		(effects
@@ -5482,6 +5488,16 @@
 			(justify left bottom)
 		)
 		(uuid "a5b33f17-25b1-497f-976a-941b6aeaee28")
+	)
+	(label "USB_D-"
+		(at 203.2 63.5 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "b558d2ec-a406-4da4-8b1c-8f1fe4874a98")
 	)
 	(label "EN"
 		(at 146.05 43.18 180)
@@ -5623,6 +5639,17 @@
 			(justify right)
 		)
 		(uuid "1b16fbe1-e043-461c-a84c-d6e8420b9c42")
+	)
+	(hierarchical_label "P_MUX_ST"
+		(shape input)
+		(at 165.1 63.5 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "2744df9f-dcfb-4bdc-ad5b-99c35f4983d9")
 	)
 	(hierarchical_label "V_SENSE"
 		(shape input)
