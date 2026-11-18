@@ -5343,7 +5343,7 @@
 		)
 		(uuid "046d827a-ce71-454f-9295-a0bd1ec82a28")
 	)
-	(label "V_ADC_RVS"
+	(label "I_ADC_RVS"
 		(at 165.1 101.6 180)
 		(effects
 			(font
@@ -5403,7 +5403,7 @@
 		)
 		(uuid "66b89ac8-5a25-4d79-a2ba-8143b4aee173")
 	)
-	(label "I_ADC_SDI"
+	(label "V_ADC_SDI"
 		(at 165.1 96.52 180)
 		(effects
 			(font
@@ -5413,7 +5413,7 @@
 		)
 		(uuid "6873235b-a369-4f35-a992-a03bb845e4e5")
 	)
-	(label "I_ADC_RVS"
+	(label "V_ADC_RVS"
 		(at 165.1 99.06 180)
 		(effects
 			(font
@@ -5423,7 +5423,7 @@
 		)
 		(uuid "69814e32-e9a4-4df0-8ee3-b3f01519c963")
 	)
-	(label "V_ADC_SCLK"
+	(label "I_ADC_SCLK"
 		(at 165.1 71.12 180)
 		(effects
 			(font
@@ -5433,7 +5433,7 @@
 		)
 		(uuid "71aad616-cd30-47a3-8b17-261d54308a0e")
 	)
-	(label "I_ADC_SDO0"
+	(label "V_ADC_SDO0"
 		(at 165.1 88.9 180)
 		(effects
 			(font
@@ -5463,7 +5463,7 @@
 		)
 		(uuid "85944057-640d-4e5e-b513-55966fb051c3")
 	)
-	(label "V_ADC_SDO0"
+	(label "I_ADC_SDO0"
 		(at 165.1 73.66 180)
 		(effects
 			(font
@@ -5493,7 +5493,7 @@
 		)
 		(uuid "b8187844-37c0-4c45-b585-23642b522f34")
 	)
-	(label "I_ADC_SDO1"
+	(label "V_ADC_SDO1"
 		(at 165.1 93.98 180)
 		(effects
 			(font
@@ -5503,7 +5503,7 @@
 		)
 		(uuid "c49aa680-2884-46ff-b7ca-75287ad6744d")
 	)
-	(label "I_ADC_SCLK"
+	(label "V_ADC_SCLK"
 		(at 165.1 91.44 180)
 		(effects
 			(font
@@ -5523,7 +5523,7 @@
 		)
 		(uuid "cc6e502a-dad6-4751-a61d-6c46cee9d90e")
 	)
-	(label "V_ADC_SDO1"
+	(label "I_ADC_SDO1"
 		(at 165.1 76.2 180)
 		(effects
 			(font
@@ -5533,7 +5533,7 @@
 		)
 		(uuid "cebf6981-741c-4317-b997-679ae613da7a")
 	)
-	(label "I_ADC_CS"
+	(label "V_ADC_CS"
 		(at 165.1 86.36 180)
 		(effects
 			(font
@@ -5553,7 +5553,7 @@
 		)
 		(uuid "d31260b6-4dfe-4e9d-ad8e-66795c487727")
 	)
-	(label "V_ADC_CS"
+	(label "I_ADC_CS"
 		(at 165.1 104.14 180)
 		(effects
 			(font
@@ -5603,7 +5603,7 @@
 		)
 		(uuid "f08d67db-5ca6-4316-a9c6-90301f0d0810")
 	)
-	(label "V_ADC_SDI"
+	(label "I_ADC_SDI"
 		(at 165.1 78.74 180)
 		(effects
 			(font
