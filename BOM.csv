@@ -3,8 +3,9 @@ Comment,Designator,Footprint,LCSC Part #,MPN,Quantity,JLC stock on 2026-11-07,Un
 4.7nF 50V X7R,C2,Capacitor_SMD:C_0402_1005Metric,C307338,CL05B472KB5VPNC,1,5665,0.0174,https://jlcpcb.com/partdetail/C307338,
 1nF 16V X7R,"C7,C8,C9,C11,C13,C14",Capacitor_SMD:C_0402_1005Metric,C189467,CC0402KRX7R7BB102,6,561800,0.0022,https://jlcpcb.com/partdetail/C189467,
 100nF 50V X7R,"C5,C6,C10,C12,C15,C16,C22,C23,C40",Capacitor_SMD:C_0402_1005Metric,C131394,CC0402KRX7R9BB104,9,10928519,0.0106,https://jlcpcb.com/partdetail/C131394,
-1uF 25V X7R,"C3,C4,C17,C18,C20,C26,C27,C28,C31,C32,C33,C38,C41,C42",Capacitor_SMD:C_0603_1608Metric,C86020,GRM188R71E105KA12D,14,79353,0.0473,https://jlcpcb.com/partdetail/C86020,
-4.7uF 25V X7R,"C19,C21,C24,C25",Capacitor_SMD:C_0805_2012Metric,C98195,CL21B475KAFNNNE,4,22878,0.0457,https://jlcpcb.com/partdetail/C98195,Stock and price checked 2026-11-18.
+1uF 25V X7R,"C3,C4,C17,C18,C26,C27,C28,C31,C32,C33,C38,C41,C42",Capacitor_SMD:C_0603_1608Metric,C86020,GRM188R71E105KA12D,13,79353,0.0473,https://jlcpcb.com/partdetail/C86020,
+1uF 16V X5R,C20,Capacitor_SMD:C_0402_1005Metric,C29266,CL05A105KO5NNNC,1,986411,0.0049,https://jlcpcb.com/partdetail/C29266,Stock and price checked 2026-11-18. X5R rated to 85 C.
+4.7uF 16V X5R,"C19,C21,C24,C25",Capacitor_SMD:C_0603_1608Metric,C19666,CL10A475KO8NNNC,4,3312437,0.015,https://jlcpcb.com/partdetail/C19666,Stock and price checked 2026-11-18. X5R rated to 85 C. Selected for light AFE load.
 10uF 25V X7R,"C30,C34",Capacitor_SMD:C_1206_3216Metric,C77093,GRM31CR71E106KA12L,2,138577,0.2372,https://jlcpcb.com/partdetail/C77093,
 10uF 25V X5R,C37,Capacitor_SMD:C_1206_3216Metric,C9807,CL31A106KAHNNNE,1,666005,0.0537,https://jlcpcb.com/partdetail/C9807,
 22uF 25V X7R,"C29,C35,C39",Capacitor_SMD:C_1210_3225Metric,C21397,GRM32ER71E226KE15L,3,72247,0.404,https://jlcpcb.com/partdetail/C21397,
