@@ -41,7 +41,7 @@ report = {'reader':'Gerbonara', 'copper_layers':4, 'outline_bounds_mm':bounds,
                     'Drill and Gerber bounds share coordinate frame',
                     'Outer rectangle and internal rounded slot present'],
           'parser_notes':['Gerbonara warns about KiCad G90 occurring after header; both files parse as absolute coordinates.'],
-          'silkscreen':'Exported as-is; user intends a later silkscreen tidy-up. No silkscreen QA/sign-off claimed.'}
+          'silkscreen':'Silkscreen and copper markings exported as saved. Board-only graphics do not enter BOM/CPL.'}
 (reports/'CAM-check.json').write_text(json.dumps(report,indent=2)+'\n')
 manifest=json.loads((out/'manifest.json').read_text())
 bundle=out/f"SigCap-Production-{manifest['design_commit'][:7]}.zip"

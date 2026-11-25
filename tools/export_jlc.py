@@ -34,6 +34,24 @@ def write_csv(path, fields, rows):
 def fmt(v):
     return f'{v:.6f}'
 
+def pcb_graphic(f):
+    """Only explicitly excluded, pad-free Symbol footprints are non-assembly graphics."""
+    attrs = {str(v) for v in (child(f, 'attr') or [])[1:]}
+    return (str(f[1]).startswith('Symbol:') and not children(f, 'pad')
+            and {'exclude_from_bom', 'exclude_from_pos_files'} <= attrs)
+
+def classify_parity(pcb, issues):
+    graphic_ids = {child(f, 'uuid')[1] for f in children(pcb, 'footprint') if pcb_graphic(f)}
+    accepted, rejected = [], []
+    for issue in issues:
+        items = issue.get('items', [])
+        if (issue['type'] in ('extra_footprint', 'duplicate_footprints') and items
+                and all(item.get('uuid') in graphic_ids for item in items)):
+            accepted.append(issue)
+        else:
+            rejected.append(issue)
+    return accepted, rejected
+
 def main():
     if run('git', 'diff', 'HEAD', '--', *INPUTS):
         raise SystemExit('Commit the saved design inputs before exporting a release.')
@@ -49,10 +67,12 @@ def main():
     for d in (raw, gerbers, reports): d.mkdir(parents=True)
     board = ROOT/'SigCap.kicad_pcb'
     schematic = ROOT/'SigCap.kicad_sch'
+    pcb = sexpdata.loads(board.read_text())
     run('kicad-cli', 'pcb', 'drc', '--refill-zones', '--schematic-parity', '--format', 'json',
         '-o', str(reports/'DRC.json'), str(board))
     drc = json.loads((reports/'DRC.json').read_text())
-    if drc['unconnected_items'] or drc['schematic_parity']:
+    graphic_parity, electrical_parity = classify_parity(pcb, drc['schematic_parity'])
+    if drc['unconnected_items'] or electrical_parity:
         raise SystemExit('Release has open connections or schematic parity issues; see reports/DRC.json.')
     layers = 'F.Cu,In1.Cu,In2.Cu,B.Cu,F.Mask,B.Mask,F.SilkS,B.SilkS,F.Paste,B.Paste,Edge.Cuts'
     run('kicad-cli', 'pcb', 'export', 'gerbers', '--layers', layers, '--check-zones',
@@ -71,10 +91,13 @@ def main():
     drawing = reports/'Assembly-top.svg'
     drawing.write_text('\n'.join(line.rstrip() for line in drawing.read_text().splitlines())+'\n')
 
-    pcb = sexpdata.loads(board.read_text())
     fps = {}
     for f in children(pcb, 'footprint'):
+        if pcb_graphic(f):
+            continue
         p = {v[1]: v[2] for v in children(f, 'property')}
+        if p['Reference'] in fps:
+            raise ValueError(f"Duplicate physical component reference: {p['Reference']}")
         fps[p['Reference']] = (f, p)
     comps = {}
     for c in ET.parse(raw/'netlist.xml').findall('./components/comp'):
@@ -187,7 +210,7 @@ def main():
     write_csv(out/'Distributor_parts.csv',fields,distributors)
     write_csv(out/'Placement_audit.csv',list(audits[0]),audits)
     counts=collections.Counter(v['type'] for v in drc['violations'])
-    (reports/'DRC-summary.txt').write_text('Open connections: 0\nSchematic parity issues: 0\nRemaining DRC findings (design exported as committed):\n'+''.join(f'{k}: {v}\n' for k,v in sorted(counts.items())))
+    (reports/'DRC-summary.txt').write_text(f'Open connections: 0\nElectrical schematic parity issues: 0\nExpected PCB-only graphic parity warnings: {len(graphic_parity)}\nRemaining DRC findings (design exported as committed):\n'+''.join(f'{k}: {v}\n' for k,v in sorted(counts.items())))
     extensions={p.suffix.lower() for p in gerbers.iterdir()}
     assert {'.gtl','.g1','.g2','.gbl','.gts','.gbs','.gto','.gbo','.gtp','.gbp','.gm1','.drl'}<=extensions,extensions
     for p in gerbers.iterdir():assert p.stat().st_size>0
@@ -219,6 +242,8 @@ BOM AND PLACEMENT
 All current part assignments come from the exported schematic, not the older root BOM.csv.
 Exception: physical H1 is excluded from the schematic BOM; Manual_after_SMT.csv retains its previously allocated C86469 / 63849-1 from root BOM.csv.
 J1 is distributor supplied (RS/Farnell/DigiKey). NT1 is copper only and omitted from assembly.
+Pad-free Symbol footprints explicitly excluded from BOM and position files are omitted from assembly,
+including duplicate REF** graphics; their copper/silkscreen remains in the Gerbers.
 U3 is labelled optional on the drawing but is NOT DNP in the design: included in the Mixed BOM and manual-fit list.
 C43/C44 are included. No other component substitutions have been made.
 Stock/prices were not revalidated; JLC's order-time matching is authoritative.
@@ -232,8 +257,10 @@ Generic correction rules do not prove a match to every individual JLC component 
 
 KNOWN AS-IS REVIEW ITEMS
 This is an export of the committed design, not a claim of a clean DRC or an electrical safety certification.
-Open connections: 0. Schematic/PCB parity issues: 0. Remaining findings are in reports/DRC.json.
-Silkscreen is intentionally unfinished and is not assessed or a release blocker for this export.
+Open connections: 0. Electrical schematic/PCB parity issues: 0.
+Expected PCB-only graphic duplicate/extra warnings: {len(graphic_parity)}. All findings remain in reports/DRC.json.
+Silkscreen and copper identification/warnings are exported as saved, including REV A.
+See the full design review in reports when present; these files are an as-is snapshot, not approval to order.
 Other findings include USB J4 single-spoke ground thermals and hole-to-copper
 clearance (~0.1944 mm versus the project's 0.25 mm rule), R25 single-spoke thermal,
 shunt R7 pad clearances versus the generic mains rule, intentional NT1 net overlap,
@@ -250,7 +277,7 @@ https://github.com/bennymeg/Fabrication-Toolkit
     manifest={'design_commit':revision,'date':date,'kicad':run('kicad-cli','version'),
               'inputs':{n:hashlib.sha256((ROOT/n).read_bytes()).hexdigest() for n in INPUTS},
               'counts':{'smt':len(smt),'mixed':len(mixed),'manual_after_smt':len(manual),'physical':len(all_parts)},
-              'drc':dict(counts),'files':{}}
+              'drc':dict(counts),'expected_graphic_parity_warnings':len(graphic_parity),'files':{}}
     for p in sorted(out.rglob('*')):
         if p.is_file() and raw not in p.parents and gerbers not in p.parents:
             manifest['files'][str(p.relative_to(out))]=hashlib.sha256(p.read_bytes()).hexdigest()
