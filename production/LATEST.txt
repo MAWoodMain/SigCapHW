@@ -1,0 +1,6 @@
+Current release: REV_A
+Manufacturing snapshot:2026-11-25-04623dd/
+Design commit:04623dddc8d29e347838b2bcbd46a95dbdfea2b1
+Complete archive:2026-11-25-04623dd/SigCap-Production-04623dd.zip
+GitHub release assets are in release/REV_A/.
+Older versioned folders are historical snapshots.

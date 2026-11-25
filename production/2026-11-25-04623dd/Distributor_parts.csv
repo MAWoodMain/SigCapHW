@@ -1,0 +1,3 @@
+Designator,Comment,Footprint,LCSC Part #,MPN,Quantity,Source,Assembly,Notes
+H1,Chassis,SigCap:63849-1,C86469,63849-1,1,LCSC / distributor; fit manually,Through-hole / manual,Physical chassis terminal. Excluded in schematic BOM; retained here from allocated project BOM. Mating crimp not included.
+J1,AC IN,SigCap:PF0030PC,,PF0030/PC,1,RS / Farnell / DigiKey,Through-hole / manual,Distributor supplied; Farnell 428784; DigiKey 708-1914-ND; RS 70427399 (US listing).

@@ -1,0 +1,58 @@
+{
+  "design_commit": "04623dddc8d29e347838b2bcbd46a95dbdfea2b1",
+  "date": "2026-11-25",
+  "kicad": "10.0.6",
+  "inputs": {
+    "SigCap.kicad_pcb": "b4cad1d9e64a6994e5da2a1f18604a3e2e36f261e4315514d4ae5b1c7da5e38c",
+    "SigCap.kicad_pro": "7f43422f70d1adeca063b6db6534da52763e84b683a8ef120aaacb086ff9e31a",
+    "SigCap.kicad_sch": "3e0d3af986807817351260651c44af8d00ffff52d3a9f80e0e11d0819c7ac2fb",
+    "acquisition.kicad_sch": "f9089288653e16126ef00876b17f0777a63fa93efbd2597dcabf56cbd890c561",
+    "afe.kicad_sch": "c73e5822c1a4583018bf4d311c671a24381d664dccf497d4018ecdb5e4f578aa",
+    "BOM.csv": "74aba2a0b3f7140d5d703a1c7d7bdd728f3c62aed0f4f22ce1a0073a15dd2b95"
+  },
+  "counts": {
+    "smt": 89,
+    "mixed": 99,
+    "manual_after_smt": 12,
+    "physical": 101
+  },
+  "drc": {
+    "starved_thermal": 5,
+    "tracks_crossing": 1,
+    "clearance": 3,
+    "hole_clearance": 4,
+    "silk_overlap": 3,
+    "silk_over_copper": 18,
+    "lib_footprint_mismatch": 1,
+    "silk_edge_clearance": 13,
+    "via_dangling": 2
+  },
+  "expected_graphic_parity_warnings": 9,
+  "files": {
+    "Distributor_parts.csv": "a480ece670c8f2f8ebd87f29d56e9c859b3a97b71c4de9739a1448741f54e79d",
+    "Full_BOM.csv": "bfbd6e15aa0c8f0970662416a74bbaddbf2a658f003610a811bd4bbdae9bce23",
+    "JLC_Mixed_BOM.csv": "ec6ff207b6235f58b71c790c1011095d71c323b9f797a34e7be83f0c7d7819db",
+    "JLC_Mixed_CPL.csv": "362afa100e7d918c9880a1389dc2c0dc3cab3afc675211de2fe906c6e81b7b1a",
+    "JLC_SMT_BOM.csv": "b84e6ea29e99a0e903c417bc856572d3cf3049a7e93dd132648a579be762a6a3",
+    "JLC_SMT_CPL.csv": "05d1612d549e55367cfbf198eec0c0f572138a7f349e41fa0f888466a5b3b5cd",
+    "Manual_after_SMT.csv": "a4786c488e25d17863dc13baadd2c07e51d7e214c4ab63ccd3cc086f415e1f5e",
+    "Placement_audit.csv": "4f8711db11aa5b9db2a194d6aef094e356874230f11bbb5c2c34d139fc8db96d",
+    "Production_notes.txt": "ef32ee0a3c53c96b66b67bc02663d2d067ac902f508f879f4f1bafe00e7b7377",
+    "SigCap-Gerbers.zip": "9b28bebcd313c0ea8acb04d4e6155958fa6d4d5edc08375745326b399b9f9be9",
+    "reports/Assembly-top.svg": "2950b6cb50270f32ecff4845ff6072e71a2bd0b2442fc8216fd15787ea9ec33b",
+    "reports/CAM-check.json": "d0187a765094608bfb30692adc88c50ee550bce52e509480826b7bca5cd0ac8d",
+    "reports/DRC-summary.txt": "97bbda593380b71b414ee1c1128b731929dbe164e572a6b161fba156ea903833",
+    "reports/DRC.json": "63dc7f231759955f9783bb4a94bf314d7a0543d696963094d2dde2ef387655fd",
+    "reports/Drill-report.txt": "51970800e44268df6a406ec181eaa8cf45d7c5e6b1725ae1d4d85e4efbb63c58",
+    "reports/ERC.json": "70c10092636b635d498f16dda946d02e5eda67df10a648c75ea50c477f1f843c",
+    "reports/Full_design_review.txt": "9f7d9500658c79d56c90a1c79a2f8cab7b527b9666172676d8456a280aa869db",
+    "reports/Gerber-In2-preview.svg": "4ac65355b7d4100ad73a91c0dbab61ee54d7ed2b66042d1dc1fcd4f5b1d6591e",
+    "reports/Gerber-bottom-preview.svg": "3208fa699fb7f9c50b4df2b66c7f2142eb9fef8e3b4d9383b0655be05e8f8672",
+    "reports/Gerber-top-preview.svg": "25b55d9737bb00687a0da40d14ed9cca5d116b83bb600d5de53314174d6e4741"
+  },
+  "release_status": "REV_A",
+  "resolved_review_items": [
+    "R35 pin1 pull-up corrected to+3V3 on schematic and PCB"
+  ],
+  "release_holds": []
+}

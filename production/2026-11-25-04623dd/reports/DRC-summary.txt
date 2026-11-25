@@ -1,0 +1,13 @@
+Open connections: 0
+Electrical schematic parity issues: 0
+Expected PCB-only graphic parity warnings: 9
+Remaining DRC findings (design exported as committed):
+clearance: 3
+hole_clearance: 4
+lib_footprint_mismatch: 1
+silk_edge_clearance: 13
+silk_over_copper: 18
+silk_overlap: 3
+starved_thermal: 5
+tracks_crossing: 1
+via_dangling: 2

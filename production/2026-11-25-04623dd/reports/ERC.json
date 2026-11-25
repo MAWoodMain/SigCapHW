@@ -1,0 +1,167 @@
+{
+    "$schema": "https://schemas.kicad.org/erc.v1.json",
+    "coordinate_units": "mm",
+    "date": "2026-11-25T20:33:57",
+    "ignored_checks": [
+        {
+            "description": "Global label only appears once in the schematic",
+            "key": "single_global_label"
+        },
+        {
+            "description": "Four connection points are joined together",
+            "key": "four_way_junction"
+        },
+        {
+            "description": "SPICE model issue",
+            "key": "simulation_model_issue"
+        },
+        {
+            "description": "Assigned footprint doesn't match footprint filters",
+            "key": "footprint_filter"
+        }
+    ],
+    "included_severities": [
+        "error",
+        "warning"
+    ],
+    "kicad_version": "10.0.6",
+    "sheets": [
+        {
+            "path": "/",
+            "uuid_path": "/c8251f29-ff32-4910-832d-3bb4c31860ba",
+            "violations": [
+                {
+                    "description": "Input Power pin not driven by any Output Power pins",
+                    "items": [
+                        {
+                            "description": "Symbol J1 Pin 1 [L, Power input, Line]",
+                            "pos": {
+                                "x": 0.3937,
+                                "y": 0.3556
+                            },
+                            "uuid": "a3c698e3-463a-4e16-ac98-9e026158fc36"
+                        }
+                    ],
+                    "severity": "error",
+                    "type": "power_pin_not_driven"
+                },
+                {
+                    "description": "Input Power pin not driven by any Output Power pins",
+                    "items": [
+                        {
+                            "description": "Symbol J1 Pin 2 [N, Power input, Line]",
+                            "pos": {
+                                "x": 0.4953,
+                                "y": 0.3556
+                            },
+                            "uuid": "41314369-ed2e-4925-85d0-bf63213c9b54"
+                        }
+                    ],
+                    "severity": "error",
+                    "type": "power_pin_not_driven"
+                },
+                {
+                    "description": "Input Power pin not driven by any Output Power pins",
+                    "items": [
+                        {
+                            "description": "Symbol P1 Pin 2 [L, Power input, Line]",
+                            "pos": {
+                                "x": 1.0033,
+                                "y": 0.3556
+                            },
+                            "uuid": "eb188588-8930-444f-accc-3064717140dc"
+                        }
+                    ],
+                    "severity": "error",
+                    "type": "power_pin_not_driven"
+                },
+                {
+                    "description": "Input Power pin not driven by any Output Power pins",
+                    "items": [
+                        {
+                            "description": "Symbol U3 Pin 2 [AC/L, Power input, Line]",
+                            "pos": {
+                                "x": 1.3843,
+                                "y": 1.4478
+                            },
+                            "uuid": "44648ed5-e1ae-4d2c-8fe8-5e74ede8c174"
+                        }
+                    ],
+                    "severity": "error",
+                    "type": "power_pin_not_driven"
+                },
+                {
+                    "description": "Symbol pin or wire end off connection grid",
+                    "items": [
+                        {
+                            "description": "Horizontal Wire, length 0.0257 mm",
+                            "pos": {
+                                "x": 1.1938,
+                                "y": 1.143
+                            },
+                            "uuid": "1af662f6-e6e8-4531-aac2-abf01cad4847"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "endpoint_off_grid"
+                },
+                {
+                    "description": "Symbol pin or wire end off connection grid",
+                    "items": [
+                        {
+                            "description": "Horizontal Wire, length 0.0251 mm",
+                            "pos": {
+                                "x": 1.219523,
+                                "y": 1.143
+                            },
+                            "uuid": "27a7ab05-2820-4d41-bef7-7b9a4c6d16c1"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "endpoint_off_grid"
+                },
+                {
+                    "description": "Symbol pin or wire end off connection grid",
+                    "items": [
+                        {
+                            "description": "Vertical Wire, length 0.1270 mm",
+                            "pos": {
+                                "x": 1.219523,
+                                "y": 1.143
+                            },
+                            "uuid": "e721a4b9-2f3a-4fda-ad03-cc142758a4ab"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "endpoint_off_grid"
+                },
+                {
+                    "description": "Symbol pin or wire end off connection grid",
+                    "items": [
+                        {
+                            "description": "Horizontal Wire, length 0.0759 mm",
+                            "pos": {
+                                "x": 1.219523,
+                                "y": 1.27
+                            },
+                            "uuid": "63b810ce-6479-4472-8d17-be4d85a1e215"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "endpoint_off_grid"
+                }
+            ]
+        },
+        {
+            "path": "/AFE/",
+            "uuid_path": "/c8251f29-ff32-4910-832d-3bb4c31860ba/b7dca6e0-4ee0-4ec4-a3ab-6d22e2f06cb2",
+            "violations": []
+        },
+        {
+            "path": "/ADS8363 and ESP32-S3/",
+            "uuid_path": "/c8251f29-ff32-4910-832d-3bb4c31860ba/b134fdce-e9d4-417a-8a0b-56c4b744823c",
+            "violations": []
+        }
+    ],
+    "source": "SigCap.kicad_sch"
+}
