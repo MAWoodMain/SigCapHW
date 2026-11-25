@@ -1,5 +1,9 @@
 # SigCap — REV A
 
+![SigCap REV A PCB, top view](docs/images/sigcap-rev-a-top.png)
+
+*KiCad top-view rendering with black solder mask. Some component bodies are omitted where 3D models are unavailable.*
+
 SigCap measures AC line voltage and load current, with isolated analogue front ends, two oscilloscope outputs and an ESP32-S3 for digital capture. REV A hardware is on order; the figures below are nominal design values, pending bench validation.
 
 For ESP32 settings, GPIO assignments and initial ADC configuration, see [ESP32 configuration and pin mappings](docs/ESP32.md).
