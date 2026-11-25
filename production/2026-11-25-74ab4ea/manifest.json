@@ -1,0 +1,58 @@
+{
+  "design_commit": "74ab4eafcb2769dce2be363ec92cec4ef7640792",
+  "date": "2026-11-25",
+  "kicad": "10.0.6",
+  "inputs": {
+    "SigCap.kicad_pcb": "d19945005db5acc3c4adef1082c2b4ebf36c8c5642303e51aa670373c2318ef6",
+    "SigCap.kicad_pro": "6269c0c001df890c4c78279a2228d055ea65c02ae32fa5b4287b4bbd6a488d5f",
+    "SigCap.kicad_sch": "2ba284fcfee7a6e9449d7e131e5f7ad30611fb67a74f473fd40a693b3c6d66be",
+    "acquisition.kicad_sch": "f9089288653e16126ef00876b17f0777a63fa93efbd2597dcabf56cbd890c561",
+    "afe.kicad_sch": "c73e5822c1a4583018bf4d311c671a24381d664dccf497d4018ecdb5e4f578aa",
+    "BOM.csv": "74aba2a0b3f7140d5d703a1c7d7bdd728f3c62aed0f4f22ce1a0073a15dd2b95"
+  },
+  "counts": {
+    "smt": 89,
+    "mixed": 99,
+    "manual_after_smt": 12,
+    "physical": 101
+  },
+  "drc": {
+    "starved_thermal": 5,
+    "tracks_crossing": 1,
+    "clearance": 3,
+    "hole_clearance": 4,
+    "silk_overlap": 2,
+    "silk_over_copper": 17,
+    "lib_footprint_mismatch": 1,
+    "silk_edge_clearance": 13,
+    "via_dangling": 2
+  },
+  "expected_graphic_parity_warnings": 9,
+  "files": {
+    "Distributor_parts.csv": "a480ece670c8f2f8ebd87f29d56e9c859b3a97b71c4de9739a1448741f54e79d",
+    "Full_BOM.csv": "bfbd6e15aa0c8f0970662416a74bbaddbf2a658f003610a811bd4bbdae9bce23",
+    "JLC_Mixed_BOM.csv": "ec6ff207b6235f58b71c790c1011095d71c323b9f797a34e7be83f0c7d7819db",
+    "JLC_Mixed_CPL.csv": "9356698cf4637243e3260c64d9f1490acf7acfb2d3973f5c4d4bdcd8b148c0c5",
+    "JLC_SMT_BOM.csv": "b84e6ea29e99a0e903c417bc856572d3cf3049a7e93dd132648a579be762a6a3",
+    "JLC_SMT_CPL.csv": "e8f33bbf2f0936138eb4289e48713b6a02d1cd275adb00c9ddb41875bae3457b",
+    "Manual_after_SMT.csv": "a4786c488e25d17863dc13baadd2c07e51d7e214c4ab63ccd3cc086f415e1f5e",
+    "Placement_audit.csv": "36dbfaa3db427cbb0c8b8786e1e541c9f285e7e03005f6ef7421ee2efbd8a15e",
+    "Production_notes.txt": "9f22671c057a14085e8fe20c258baa6d85ae86ec08535c3585b5c5c635e4d16b",
+    "SigCap-Gerbers.zip": "425bf8df94081e257adc39f8d360e1e5a72518d26ae43de2d1499ae2f22d488f",
+    "reports/Assembly-top.svg": "51fd6470a2480ea2bb308405ad3bc37d71afb0ab4eb8b6dbd150b22bc021fdc6",
+    "reports/CAM-check.json": "c7f810325f2f12830b15aef14f666a5cbb664adc7a2c7a9957eeddb91be5a7ba",
+    "reports/DRC-summary.txt": "480543fae17f1fdf4627710e9a0ae07e6c8d5bc457a2e54896551380e73ba878",
+    "reports/DRC.json": "54c2161e2443e00d42f33303d35c295eb32c17cbc61039590588421f8c7aa4a4",
+    "reports/Drill-report.txt": "f8c1fc7aa0fde9cabbff5f7ed4b65a76c01a3324719c78465ae81ec971c19c77",
+    "reports/ERC.json": "9ab580af3628daf1c88f6873889f368cb3c5e777f651504f295260eb0fd209b8",
+    "reports/Full_design_review.txt": "12a31c4e64cf0f9d1f2422f4fa29dc4ab8e89a2d8a0afb580f8731fe17909c44",
+    "reports/Gerber-In2-preview.svg": "d480b8505a057751919650add735576d98ebfe5be23176fe603ac447f982c240",
+    "reports/Gerber-bottom-preview.svg": "b6d408a722101dee9528bef69f411017602cc99938e7e8c27d567d5ff1d47f12",
+    "reports/Gerber-top-preview.svg": "5e648cb2f367738236b5f27ed02a5c9edc44f356e4a4e17bd93a971f99560bb4"
+  },
+  "release_status": "review_hold",
+  "release_holds": [
+    "R35 status pull-up is5V into ESP32 GPIO1; change upper net to3V3",
+    "Verify enclosure fit: board160x120mm versus published159x119.5mm"
+  ]
+}

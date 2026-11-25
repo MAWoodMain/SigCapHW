@@ -1,0 +1,45 @@
+{
+  "reader": "Gerbonara",
+  "copper_layers": 4,
+  "outline_bounds_mm": [
+    [
+      59.975,
+      -150.025
+    ],
+    [
+      220.025,
+      -29.975
+    ]
+  ],
+  "outline_nominal_mm": [
+    160,
+    120
+  ],
+  "slot_outline_objects": 4,
+  "plated_drill_features": 287,
+  "nonplated_drill_features": 6,
+  "layer_objects": {
+    "('top', 'copper')": 3039,
+    "('top', 'mask')": 394,
+    "('top', 'silk')": 4032,
+    "('top', 'paste')": 359,
+    "('bottom', 'copper')": 1094,
+    "('bottom', 'mask')": 46,
+    "('bottom', 'silk')": 47,
+    "('bottom', 'paste')": 0,
+    "('inner_2', 'copper')": 309,
+    "('inner_1', 'copper')": 288,
+    "('mechanical', 'outline')": 8
+  },
+  "checks": [
+    "All 11 Gerber layers parsed",
+    "Both Excellon files parsed",
+    "PTH/NPTH counts match KiCad drill report",
+    "Drill and Gerber bounds share coordinate frame",
+    "Outer rectangle and internal rounded slot present"
+  ],
+  "parser_notes": [
+    "Gerbonara warns about KiCad G90 occurring after header; both files parse as absolute coordinates."
+  ],
+  "silkscreen": "Silkscreen and copper markings exported as saved. Board-only graphics do not enter BOM/CPL."
+}

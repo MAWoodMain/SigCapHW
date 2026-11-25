@@ -1,0 +1,143 @@
+SigCap Rev A - full design review
+Reviewed 25 November 2026
+Design source: 74ab4eafcb2769dce2be363ec92cec4ef7640792
+Status: REVIEW HOLD - as-saved fabrication/assembly snapshot; do not treat as approval to manufacture.
+No circuit, routing, outline or component-value corrections were made during this review.
+
+RELEASE ITEMS
+
+1. HIGH - R35 status pull-up drives a 3.3 V ESP32 GPIO from 5 V.
+   Netlist: +5V -> R35 pin 1; R35 pin 2 -> TPS2116 U10 ST pin 8 -> ESP32 U6 IO1 pin 5.
+   ST is open drain and releases high when VIN1 powers the output. R35 therefore pulls the
+   ESP32 input toward 5 V. The module's input-high specification tops out at VDD+0.3 V.
+   Correct R35 pin 1 to +3V3, retaining 10 kohm. This was missed in earlier reviews.
+   USB-only testing may hide the issue because ST is low when VIN2 is selected.
+   https://www.ti.com/lit/ds/symlink/tps2116.pdf section 7.3.3
+   https://documentation.espressif.com/esp32-s3-mini-1_mini-1u_datasheet_en.pdf table 6-3
+
+2. HIGH - Verify the intended Hammond enclosure fit before committing to fabrication.
+   Current outer PCB rectangle: 160 x 120 mm (x60..220, y30..150).
+   Hammond 1455Q1601 product data lists maximum PCB length159 mm and width119.5 mm.
+   Its drawing also refers to nominal120 mm PCB width: this is a tolerance/fit discrepancy,
+   not proof that an actual board cannot fit. Check an actual enclosure or its CAD/tolerances.
+   Do not blindly shrink the outline without checking connector/end-panel alignment.
+   https://www.hammfg.com/part/1455Q1601
+   https://www.hammfg.com/files/parts/pdf/1455Q1601.pdf
+
+3. MANUFACTURING - J4 USB NPTH-to-copper spacing remains about0.1944 mm.
+   The project rule is0.25 mm and JLC publishes0.2 mm. This is about6 um below the
+   published capability. Ask CAM to confirm or adjust the footprint locally; avoid globally
+   relaxing clearance. This is an existing standard-footprint geometry issue, not a new artwork fault.
+   https://jlcpcb.com/capabilities/Capabilities
+
+4. ASSEMBLY - USB J4 shell stakes require a soldering-process check.
+   USB4105-GF-A is correctly SMT-attributed but has four plated through-hole shell slots
+   without F.Paste apertures. Ensure the assembler solders these stakes, or finish them manually.
+   SMT signal-pad reflow alone should not be assumed to secure all shell anchors.
+   https://gct.co/connector/usb4105
+
+5. PROCUREMENT - Add/select J1 inlet fuse cartridges outside the PCB BOM.
+   PF0030/PC is a twin-fused5x20 mm inlet; the inlet body does not define the fitted cartridges.
+   F1 protects only the IRM-05-5 supply branch. Specify fuse ratings/characteristics for the
+   intended load and inlet. The J1/P1 connector rating is10 A/250VAC continuous; 50 A is a
+   measurement transient target and does not increase their continuous current rating.
+   https://www.bulgin.com/products/media/bulgin/data/IEC_connectors.pdf
+
+ELECTRICAL REVIEW - NO ADDITIONAL DEFINITE FAULT FOUND
+
+- Current path: 1mohm shunt and AMC3302 gain41 give about41mV/A at the unity receiver.
+  Expected output at50 A peak:2.05 V peak. Shunt dissipation:0.1 W at10 A and2.5 W at50 A.
+  Assigned Vishay WSK12161L000FEA is rated1mohm/3 W and its land pattern matches the
+  custom copper pads. This does not establish connector surge endurance or overload duration.
+  https://www.vishay.com/docs/30189/wsk1216.pdf
+- Voltage divider/AMC3330/unity receiver: 2/481 ~=4.158mV/V. Output at230VRMS is1.353Vpeak;
+  at265VRMS it is1.558Vpeak. No new divider topology error was found.
+- LM27762 dividers give about+2.460 V and-2.501 V. OPA2320 supply total is below5.5 V;
+  useful headroom remains for the intended inputs. C43/C44 provide local op-amp bypassing.
+- U7/U8 AVDD=5 V, DVDD=3.3 V; AIN_GND, analogue/reference/digital grounds share GND.
+  REFIO capacitors are10uF each; REFCAP is22uF+1uF each. No new reference-net fault.
+  ADS8681W EP has an isolated solderable land; no new primary evidence warrants reversing
+  the previously chosen electrically unconnected EP arrangement.
+- TPS2116 supply/mode/priority routing is coherent; 33k/10k gives about4.3 V nominal priority
+  threshold. Both output pins are connected. R35 is the exception identified above.
+- ESP32 USB D+/D-, reset RC/button, BOOT button, UART and supply routing are coherent.
+  ADC reset pins are pulled high. Firmware must explicitly reset/reconfigure ADCs after ESP restart.
+- No definite AMS1117 stability error established: the output includes22uF tantalum plus ceramic
+  bulk. Check startup/load steps and junction temperature. At500mA, (5-3.3)*0.5=0.85 W.
+
+SPI AND FIRMWARE
+
+- All12 ADC interface signals are connected. Two separate SPI peripheral buses remain feasible.
+- In2 ground covers the bottom SPI runs including SDI escapes, is stitched, and reaches the
+  ADC ground vias. The relocated3.3 V feed no longer cuts that reference region.
+- Dual-SDO requires deliberate driver/pin routing. ESP DIO data0 is SPI_D/MOSI and data1 is
+  SPI_Q/MISO; the board has separate ADC SDI and SDO0 pins. A default ordinary SPI bus
+  configuration will not automatically capture both data lanes correctly.
+- A feasible approach is startup configuration via ordinary SPI/bit-bang, then separate SDI held
+  low for NOPs and read-only DIO on SDO0/SDO1. Alternatively route SPI_D input and output
+  independently using the GPIO matrix. Keep ADC SDO GPIOs input-only; do not drive commands
+  into an ADC output. This is firmware work, not evidence that another PCB circuit is required.
+- Sustained sample rate, clock/sample timing margin, simultaneous-channel skew and lane bit order
+  remain to be established in firmware and on hardware. Layout review does not prove1MSPS/channel.
+  https://docs.espressif.com/projects/esp-idf/en/stable/esp32s3/api-reference/peripherals/spi_master.html
+  https://raw.githubusercontent.com/espressif/esp-idf/master/components/esp_driver_spi/src/gpspi/spi_common.c
+
+ISOLATION, POWER PATH AND MECHANICS
+
+- Copper HV graphics do not reduce the previously limiting local isolation gap. Front danger
+  artwork extends to approximatelyX124.8 versus the low-voltage plane boundaryX131.1, about6.3mm.
+  The previously measured approximately6.19mm DCDC routing remains the limiting local feature.
+- Slot and plane setback remain present. Symbols identify the hazardous area; copper under
+  solder mask is not a safety certification or a guaranteed high-contrast printed warning.
+- PE is continuously routed from J1 to P1 and H1 with no fuse/switch in that route.
+  H1 geometry agrees with TE63849-1 (5.08mm pitch,1.4mm holes).
+  P1 mounting holes are NPTH with no copper. No new gross current-path/PE connectivity fault found.
+  Protective-bond fault-current testing, enclosure bonding/harness and finished-product insulation
+  qualification are not established by this file review.
+  https://www.te.com/en/product-63849-1.html
+
+BOM AND FOOTPRINTS
+
+- No clear wrong package assignment found among U1/U2/U5/U6/U7/U8/U10, C36, R7 or J4.
+  The shared ESP32-S2/S3 MINI footprint name alone is not a package mismatch.
+- C36 is the specified B/3528 tantalum case,16 V. Allocated LM27762 capacitor package sizes and
+  nominal voltage ratings agree with the selected parts. Effective capacitance remains a bench check.
+- Minor library-quality item: R7 courtyard is body-sized and does not enclose the full pad span.
+  No actual neighboring collision found; a larger courtyard would improve future placement checking.
+- H1 is deliberately retained in the manual-fit list despite its schematic BOM exclusion, using the
+  previously allocated C86469/63849-1. J1 is distributor supplied. NT1 and artwork are not components.
+- U3 is labelled optional but is not DNP, so it remains in mixed assembly/manual fit.
+- Current JLC availability/prices were not revalidated. Individual JLC model pin1/polarity/origin
+  still needs checking in the order preview; generic rotation rules are not individual-model approval.
+
+CAPACITOR PERFORMANCE CHECKS - OPTIONAL, NOT ESTABLISHED ERRORS
+
+- ADS8681W section8.3.1 recommends more local supply bulk, while8.4.1 describes local1uF,
+  matching this board. Additional local bulk is conservative, but those inconsistent instructions
+  do not establish an unequivocal missing-cap fault here. Verify supply/reference transients.
+  https://www.ti.com/lit/ds/symlink/ads8681w.pdf
+- Small LM27762 MLCCs need DC-bias/temperature consideration, but the light op-amp load and
+  datasheet small-cap tradeoffs mean insufficient capacitance is not established. Check rail ripple.
+  https://www.ti.com/lit/ds/symlink/lm27762.pdf
+
+AUTOMATED CHECKS AND OUTPUTS
+
+- PCB DRC with zone refill:0 unconnected;48 other findings.
+- Electrical schematic parity:0. Additional9 duplicate/extra-footprint warnings refer only to5
+  pad-free Symbol footprints explicitly excluded from BOM and position files. These are accepted
+  intentionally, not hidden: DRC.json retains every diagnostic. Physical mismatch checks still block export.
+- Remaining DRC types:17 silk/mask,13 silk/edge,2 silk overlaps,5 starved thermals (J4/R25),
+  4 USB hole clearances,3 R7 netclass clearances,1 accepted NT1 crossing,2 reset test vias,
+  1 U6 library mismatch. No new copper short reported.
+- ERC:8 findings, comprising4 externally powered mains input-pin flags and4 off-grid short wire
+  segments on the root sheet. No additional AFE/acquisition-sheet ERC violation. ERC.json retained.
+- Independent Gerber reader parsed all11 layers and both Excellon files, confirmed4 copper layers,
+  nominal160x120mm outer rectangle and rounded internal slot. Drill counts match KiCad:
+  287 plated features and6 nonplated features. Common coordinate frame checked.
+- SMT BOM/CPL:89 placements; mixed BOM/CPL:99 placements; manual-after-SMT list12 parts.
+  Physical BOM total101; excluded graphics and copper net ties absent. Checksums match committed inputs.
+- Fresh Gerber previews show REV A and both warning graphics. Silkscreen clipping is cosmetic and
+  remaining intentional hatch/connector-edge warnings are not treated as new electrical faults.
+
+Regenerated files describe the saved design, including the unresolved R35 connection.
+Resolve item1 and verify item2 before ordering. Re-export if the circuit or outline is changed.
