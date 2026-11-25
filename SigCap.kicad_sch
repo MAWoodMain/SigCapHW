@@ -3971,6 +3971,12 @@
 		(uuid "3ee2e183-b94f-4d21-bd5e-a73a84ab2969")
 	)
 	(junction
+		(at 217.17 148.59)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "48ee14ab-89f0-41e2-99a9-c7e86587fa35")
+	)
+	(junction
 		(at 111.76 36.83)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -3999,12 +4005,6 @@
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "6e48f8da-a05b-42ec-8d37-b9dcc041cebd")
-	)
-	(junction
-		(at 212.09 148.59)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "70529971-abee-46f5-8b0a-221e6a29692a")
 	)
 	(junction
 		(at 64.77 73.66)
@@ -4199,12 +4199,6 @@
 		(uuid "f3467a25-ede4-4e6f-9e18-820ec282157c")
 	)
 	(junction
-		(at 212.09 138.43)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "f88d75b8-e5a0-4f93-bb73-6c40175ea422")
-	)
-	(junction
 		(at 121.92 57.15)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -4219,6 +4213,16 @@
 			(type default)
 		)
 		(uuid "032e680d-cd3c-4597-aefe-69bfccaea21a")
+	)
+	(wire
+		(pts
+			(xy 217.17 148.59) (xy 228.6 148.59)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "045398a2-c366-4438-8bc8-ed8bebaccfae")
 	)
 	(wire
 		(pts
@@ -5566,16 +5570,6 @@
 		)
 		(uuid "c356bde8-61b9-4aa1-b590-997270ea58ef")
 	)
-	(wire
-		(pts
-			(xy 212.09 138.43) (xy 212.09 140.97)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "c5d3e5af-4e69-4cf5-a2d1-30fe4376ba03")
-	)
 	(polyline
 		(pts
 			(xy 148.59 12.7) (xy 148.59 157.48)
@@ -5629,7 +5623,7 @@
 	)
 	(wire
 		(pts
-			(xy 212.09 146.05) (xy 212.09 148.59)
+			(xy 217.17 146.05) (xy 217.17 148.59)
 		)
 		(stroke
 			(width 0)
@@ -5742,7 +5736,7 @@
 	)
 	(wire
 		(pts
-			(xy 212.09 148.59) (xy 228.6 148.59)
+			(xy 212.09 148.59) (xy 217.17 148.59)
 		)
 		(stroke
 			(width 0)
@@ -8469,7 +8463,7 @@
 	)
 	(symbol
 		(lib_id "Device:R_Small")
-		(at 212.09 143.51 0)
+		(at 217.17 143.51 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -8480,7 +8474,7 @@
 		(fields_autoplaced yes)
 		(uuid "5329c307-6bce-4550-b582-72e7ad500d37")
 		(property "Reference" "R35"
-			(at 214.63 142.2399 0)
+			(at 219.71 142.2399 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -8491,7 +8485,7 @@
 			)
 		)
 		(property "Value" "10k"
-			(at 214.63 144.7799 0)
+			(at 219.71 144.7799 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -8502,7 +8496,7 @@
 			)
 		)
 		(property "Footprint" "Resistor_SMD:R_0402_1005Metric"
-			(at 212.09 143.51 0)
+			(at 217.17 143.51 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -8513,7 +8507,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 212.09 143.51 0)
+			(at 217.17 143.51 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -8524,7 +8518,7 @@
 			)
 		)
 		(property "Description" "Resistor, small symbol"
-			(at 212.09 143.51 0)
+			(at 217.17 143.51 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -8535,7 +8529,7 @@
 			)
 		)
 		(property "MPN" "0402WGF1002TCE"
-			(at 212.09 143.51 0)
+			(at 217.17 143.51 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -8546,7 +8540,7 @@
 			)
 		)
 		(property "LCSC Part #" "C25744"
-			(at 212.09 143.51 0)
+			(at 217.17 143.51 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -10043,6 +10037,84 @@
 			(project "SigCap"
 				(path "/c8251f29-ff32-4910-832d-3bb4c31860ba"
 					(reference "C7")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:+3V3")
+		(at 217.17 140.97 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "8f13d220-8676-47c7-adfe-cbe2e65c5d17")
+		(property "Reference" "#PWR079"
+			(at 217.17 144.78 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "+3V3"
+			(at 217.17 135.89 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 217.17 140.97 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 217.17 140.97 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"+3V3\""
+			(at 217.17 140.97 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "ca303398-9acd-4ba9-bd1e-7e73a7c2aede")
+		)
+		(instances
+			(project "SigCap"
+				(path "/c8251f29-ff32-4910-832d-3bb4c31860ba"
+					(reference "#PWR079")
 					(unit 1)
 				)
 			)
