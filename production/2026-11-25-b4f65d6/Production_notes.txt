@@ -1,0 +1,51 @@
+SigCap JLCPCB production package
+Design commit: b4f65d664b41facb4c4d933a8c2161bfeb7a8e95
+Exported: 2026-11-25; 10.0.6
+
+UPLOADS
+1. Bare board: SigCap-Gerbers.zip (4 copper, both masks, both silks, both paste layers, outline and separate PTH/NPTH Excellon).
+2. SMT assembly: JLC_SMT_BOM.csv + JLC_SMT_CPL.csv (89 components, top side only).
+   Fit the 12 components in Manual_after_SMT.csv separately.
+3. Alternatively, if ordering mixed SMT/THT assembly: JLC_Mixed_BOM.csv + JLC_Mixed_CPL.csv (99 components).
+   Confirm through-hole/manual insertion support and fees with JLCPCB. Distributor_parts.csv remains separate.
+Do not mix the SMT BOM with the Mixed CPL, or vice versa.
+
+BOARD SETTINGS
+FR4, 4 layers, 1.6 mm, 160 x 120 mm nominal outer rectangle.
+Layer order: F.Cu / In1.Cu / In2.Cu / B.Cu. Internal isolation slot is in Edge.Cuts.
+Design uses 35 um copper layers and nominal 0.1 / 1.24 / 0.1 mm dielectrics.
+Select and verify a compatible JLC stackup; do not assume the uploader infers dielectric spacing from Gerbers.
+Gerbers and drills use the absolute origin. CPL uses that same origin with Y increasing upwards
+(KiCad exports negative Y for this board); no mirroring, scaling or origin shifting applied.
+Silkscreen has mask openings subtracted in the export; design text was not edited.
+
+BOM AND PLACEMENT
+All current part assignments come from the exported schematic, not the older root BOM.csv.
+Exception: physical H1 is excluded from the schematic BOM; Manual_after_SMT.csv retains its previously allocated C86469 / 63849-1 from root BOM.csv.
+J1 is distributor supplied (RS/Farnell/DigiKey). NT1 is copper only and omitted from assembly.
+U3 is labelled optional on the drawing but is NOT DNP in the design: included in the Mixed BOM and manual-fit list.
+C43/C44 are included. No other component substitutions have been made.
+Stock/prices were not revalidated; JLC's order-time matching is authoritative.
+Placement_audit.csv records every coordinate and rotation adjustment. Standard rotation corrections
+come from Fabrication-Toolkit revision 7f627b6be76081b962161b9eb9fe3a326a18c915 (data and license in tools/vendor).
+THT placements use pad bounding-box centers; SMT uses footprint anchors except custom R7,
+whose F.Fab body center is used because its anchor is offset from the physical body.
+Review JLC's component preview against reports/Assembly-top.svg, especially pin 1/polarity and
+centering for U1/U2/U4/U5/U6/U7/U8/U9/U10, polarized C36, custom R7, and hybrid USB J4.
+Generic correction rules do not prove a match to every individual JLC component model.
+
+KNOWN AS-IS REVIEW ITEMS
+This is an export of the committed design, not a claim of a clean DRC or an electrical safety certification.
+Open connections: 0. Schematic/PCB parity issues: 0. Remaining findings are in reports/DRC.json.
+Silkscreen is intentionally unfinished and is not assessed or a release blocker for this export.
+Other findings include USB J4 single-spoke ground thermals and hole-to-copper
+clearance (~0.1944 mm versus the project's 0.25 mm rule), R25 single-spoke thermal,
+shunt R7 pad clearances versus the generic mains rule, intentional NT1 net overlap,
+two unused reset test vias, and U6 library-footprint mismatch.
+Confirm USB hole clearance with CAM before release; assembly artwork/placement preview still needs approval.
+Enclosure, harness/crimp hardware, fuses fitted in the inlet, and mounting hardware are not automatically covered by this PCB BOM.
+
+REFERENCES
+https://jlcpcb.com/help/article/how-to-generate-gerber-and-drill-files-in-kicad-9
+https://jlcpcb.com/help/article/how-to-generate-the-bom-and-centroid-file-from-kicad
+https://github.com/bennymeg/Fabrication-Toolkit

@@ -1,0 +1,12 @@
+Open connections: 0
+Schematic parity issues: 0
+Remaining DRC findings (design exported as committed):
+clearance: 3
+hole_clearance: 4
+lib_footprint_mismatch: 1
+silk_edge_clearance: 12
+silk_over_copper: 104
+silk_overlap: 108
+starved_thermal: 5
+tracks_crossing: 1
+via_dangling: 2

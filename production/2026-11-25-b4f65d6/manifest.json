@@ -1,0 +1,50 @@
+{
+  "design_commit": "b4f65d664b41facb4c4d933a8c2161bfeb7a8e95",
+  "date": "2026-11-25",
+  "kicad": "10.0.6",
+  "inputs": {
+    "SigCap.kicad_pcb": "6faa94dbac6eeaf7a1bafff40e01c84cc0ed50a879666d7581680d01f09b6499",
+    "SigCap.kicad_pro": "ad8f66cc4293418e714dd886867a546393e5de34e9da840bce7a2fa8f338496d",
+    "SigCap.kicad_sch": "2ba284fcfee7a6e9449d7e131e5f7ad30611fb67a74f473fd40a693b3c6d66be",
+    "acquisition.kicad_sch": "f9089288653e16126ef00876b17f0777a63fa93efbd2597dcabf56cbd890c561",
+    "afe.kicad_sch": "c73e5822c1a4583018bf4d311c671a24381d664dccf497d4018ecdb5e4f578aa",
+    "BOM.csv": "74aba2a0b3f7140d5d703a1c7d7bdd728f3c62aed0f4f22ce1a0073a15dd2b95"
+  },
+  "counts": {
+    "smt": 89,
+    "mixed": 99,
+    "manual_after_smt": 12,
+    "physical": 101
+  },
+  "drc": {
+    "starved_thermal": 5,
+    "tracks_crossing": 1,
+    "clearance": 3,
+    "hole_clearance": 4,
+    "silk_overlap": 108,
+    "silk_over_copper": 104,
+    "lib_footprint_mismatch": 1,
+    "silk_edge_clearance": 12,
+    "via_dangling": 2
+  },
+  "files": {
+    "Distributor_parts.csv": "a480ece670c8f2f8ebd87f29d56e9c859b3a97b71c4de9739a1448741f54e79d",
+    "Full_BOM.csv": "bfbd6e15aa0c8f0970662416a74bbaddbf2a658f003610a811bd4bbdae9bce23",
+    "JLC_Mixed_BOM.csv": "ec6ff207b6235f58b71c790c1011095d71c323b9f797a34e7be83f0c7d7819db",
+    "JLC_Mixed_CPL.csv": "050bd55df51e48fd54fc3ecc000b34616cd86c39019e12180876c30423052052",
+    "JLC_SMT_BOM.csv": "b84e6ea29e99a0e903c417bc856572d3cf3049a7e93dd132648a579be762a6a3",
+    "JLC_SMT_CPL.csv": "2f5d7023d9f7526f7ece2b309ee1d538f183e571db98f2a786e0c38d3b568fe8",
+    "Manual_after_SMT.csv": "a4786c488e25d17863dc13baadd2c07e51d7e214c4ab63ccd3cc086f415e1f5e",
+    "Placement_audit.csv": "bec1065476f9e5bcf2961a4ee930b5fbb6d35be1e954316a90b21546299045f7",
+    "Production_notes.txt": "949e4c873ad059d5e8c7e31ef90db8a2e67b5e53a41d470f74992acdf7f31bf3",
+    "SigCap-Gerbers.zip": "c954bce4ea7830560f78124b253380f82f50757c8c9e3efb7ad4a3c620cf6984",
+    "reports/Assembly-top.svg": "c1e502fc2938b9d34fb80e96993f607cb4f451509f3fc88450183984d4da9dac",
+    "reports/CAM-check.json": "625b6d1978fdac5717e2bdeed5ec6a649247c3fe20de97b9057ed592ecb26e8c",
+    "reports/DRC-summary.txt": "5a6bd583e0bdaac6d98ebeef09b021a43c03f84ea3902b3148f9cd50df8ed741",
+    "reports/DRC.json": "45c9b547e32de06ae9b8ce85bac84b5a299cb92e77e025494ff6e119784bbaee",
+    "reports/Drill-report.txt": "42a49ced395331d2c840ef96e6dbb0f82a67d47818865c301d391fd4aaf5e9ba",
+    "reports/Gerber-In2-preview.svg": "8156e27990302c97871134f40a0feb574cb8aa6718d77d67b1d5c1ca2f14074a",
+    "reports/Gerber-bottom-preview.svg": "93dd27307f93c79a644011ff1668924d72201480bfda6c425574017a863706ec",
+    "reports/Gerber-top-preview.svg": "5d6f39563a031b4e8a3da0c81de1e5683d1e43672dd2020b1605974046b204b9"
+  }
+}

@@ -33,3 +33,8 @@ fp-info-cache
 *~
 .DS_Store
 Thumbs.db
+
+# Intermediate production export files; delivery archives and reports are tracked
+/production/**/raw/
+/production/**/gerbers/
+/tools/__pycache__/

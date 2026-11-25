@@ -1,0 +1,5 @@
+Placement transformation data from https://github.com/bennymeg/Fabrication-Toolkit
+Revision: 7f627b6be76081b962161b9eb9fe3a326a18c915
+File: plugins/transformations.csv
+License: Apache-2.0 (included).
+Trailing whitespace normalized; rule values unchanged.

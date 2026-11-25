@@ -1,0 +1,13 @@
+Designator,Comment,Footprint,LCSC Part #,MPN,Quantity,Source,Assembly,Notes
+F1,1A,Fuse:Fuse_Littelfuse_372_D8.50mm,C142712,38211000000,1,JLCPCB,Through-hole / manual,
+H1,Chassis,SigCap:63849-1,C86469,63849-1,1,LCSC / distributor; fit manually,Through-hole / manual,Physical chassis terminal. Excluded in schematic BOM; retained here from allocated project BOM. Mating crimp not included.
+J1,AC IN,SigCap:PF0030PC,,PF0030/PC,1,RS / Farnell / DigiKey,Through-hole / manual,Distributor supplied; Farnell 428784; DigiKey 708-1914-ND; RS 70427399 (US listing).
+J2,Current Sense,Connector_Coaxial:BNC_Amphenol_B6252HB-NPP3G-50_Horizontal,C22457552,B6252HB-NPP3G-50,1,JLCPCB,Through-hole / manual,
+J3,Voltage Sense,Connector_Coaxial:BNC_Amphenol_B6252HB-NPP3G-50_Horizontal,C22457552,B6252HB-NPP3G-50,1,JLCPCB,Through-hole / manual,
+J5,UART,Connector_PinHeader_2.54mm:PinHeader_1x03_P2.54mm_Vertical,C3335811,TSW-103-07-G-S,1,JLCPCB,Through-hole / manual,
+P1,Load Out,SigCap:PX0675PC,C3095293,PX0675/PC,1,JLCPCB,Through-hole / manual,
+RV1,14D431K,Varistor:RV_Disc_D15.5mm_W5.2mm_P7.5mm,C1527438,MOV-14D431K,1,JLCPCB,Through-hole / manual,
+SW1,RST,Button_Switch_THT:SW_Tactile_SKHH_Angled,C125034,SKHHLQA010,1,JLCPCB,Through-hole / manual,
+SW2,BOOT,Button_Switch_THT:SW_Tactile_SKHH_Angled,C125034,SKHHLQA010,1,JLCPCB,Through-hole / manual,
+TP1,PGOOD,TestPoint:TestPoint_Keystone_5000-5004_Miniature,C5199900,5000,1,JLCPCB,Through-hole / manual,
+U3,IRM-05-5,Converter_ACDC:Converter_ACDC_MeanWell_IRM-05-xx_THT,C48603696,IRM-05-5,1,JLCPCB,Through-hole / manual,
